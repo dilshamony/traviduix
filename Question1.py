@@ -1,16 +1,41 @@
-rows = int(input("Enter the number of rows: "))
+def printDiamond(n):
+    print("")
+    j = 0
 
-for i in range(rows + 1, 0, -1):
-    for j in range(0, i - 1):
-        print("*", end=' ')
-    print()
+    for i in range(0, n):
 
-for i in range(0, rows):
+        for j in range(i, n):
+            print("*", end="")
 
-    for j in range(0, i + 1):
-        print("* ", end="")
+        # for middle " "
+        for j in range(0, 2 * i + 1):
+            print(" ", end="")
 
-    print()
+        # for right *
+        for j in range(i, n):
+            print("*", end="")
+
+        print("")
+
+    for i in range(0, n - 1):
+        for j in range(0, i + 2):
+            print("*", end="")
+
+        for j in range(0, 2 * (n - 1 - i) - 1):
+            print(" ", end="")
+
+        # for right *
+        for j in range(0, i + 2):
+            print("*", end="")
+
+        print("")
+
+    print("")
 
 
+if __name__ == '__main__':
+    # Define n
+    n = 10
+    print("Inverse Diamond Pattern for n = ", n)
+    printDiamond(n)
 
