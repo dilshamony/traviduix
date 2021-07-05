@@ -1,6 +1,6 @@
 start=int(input("Enter the 1st number:"))
 end=int(input("Enter the 2nd number:"))
-l=[]
+num=[]
 for i in range(start,end+1):
     flag =0
     for j in range(2,i):
@@ -8,6 +8,6 @@ for i in range(start,end+1):
             flag=1
             break
     if(flag==0):
-        l.append(i)
-print("prime number is:",l)
-print("Total:",sum(l))
+        num.append(i)
+print("prime number is:",num)
+print("Total:",sum(num))
